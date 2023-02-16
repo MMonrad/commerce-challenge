@@ -7,14 +7,27 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="commerce-challengeTests\obj\commerce-challengeTests.csproj.nuget.dgspec.json" />
-      <_ContentIncludedByDefault Remove="commerce-challengeTests\obj\project.assets.json" />
-      <_ContentIncludedByDefault Remove="commerce-challengeTests\obj\project.packagespec.json" />
+        <OpenApiReference Include="commerce-swagger.json" SourceUrl="https://azfun-impact-code-challenge-api.azurewebsites.net/api/swagger/json">
+            <Namespace>Commerce</Namespace>
+            <ClassName>CommerceClient</ClassName>
+            <OutputPath>CommerceClient.cs</OutputPath>
+        </OpenApiReference>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.3" />
-      <PackageReference Include="System.Text.Json" Version="7.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.2" />
+        <PackageReference Include="System.Text.Json" Version="7.0.2" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+
+        <PackageReference Include="NSwag.ApiDescription.Client" Version="13.18.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 using System;
+using commerce_challenge.Core.Http;
 using commerce_challenge.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -44,6 +45,11 @@ namespace commerce_challenge
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFrameworkInMemoryDatabase();
+            services.AddDbContextFactory<CommerceDbContext>(opt =>
+            {
+                opt.EnableDetailedErrors();
+                opt.EnableSensitiveDataLogging();
+            });
 
             services.AddDistributedMemoryCache();
             services.AddLogging();
@@ -67,7 +73,9 @@ namespace commerce_challenge
                 options.MaxAge = TimeSpan.FromDays(120); // defaults to 30 days
             });
 
-            services.AddHttpClient();
+            services.AddSingleton<AuthenticationHandler>();
+            services.AddHttpClient("commerce")
+                .AddHttpMessageHandler<AuthenticationHandler>();
 
             services.AddResponseCompression(options =>
             {
