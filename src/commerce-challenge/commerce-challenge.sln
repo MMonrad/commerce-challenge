@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commerce-challenge", "commerce-challenge.csproj", "{EEBACD08-08E8-43D5-93EB-8B62C46D35C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AF7A662B-B078-4AA2-90CA-21F0A50A65E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commerce-challengeTests", "..\Tests\commerce-challenge\commerce-challengeTests\commerce-challengeTests.csproj", "{09A92F10-21B0-4309-9B02-405B7EAE7772}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "..\..\build\_build.csproj", "{E5F4FC4C-2BFD-4EF1-A778-D0ADEAF84142}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5F4FC4C-2BFD-4EF1-A778-D0ADEAF84142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F4FC4C-2BFD-4EF1-A778-D0ADEAF84142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBACD08-08E8-43D5-93EB-8B62C46D35C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBACD08-08E8-43D5-93EB-8B62C46D35C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBACD08-08E8-43D5-93EB-8B62C46D35C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBACD08-08E8-43D5-93EB-8B62C46D35C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A92F10-21B0-4309-9B02-405B7EAE7772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A92F10-21B0-4309-9B02-405B7EAE7772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A92F10-21B0-4309-9B02-405B7EAE7772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A92F10-21B0-4309-9B02-405B7EAE7772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09A92F10-21B0-4309-9B02-405B7EAE7772} = {AF7A662B-B078-4AA2-90CA-21F0A50A65E3}
+	EndGlobalSection
+EndGlobal
