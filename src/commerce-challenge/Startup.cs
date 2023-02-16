@@ -56,6 +56,7 @@ namespace commerce_challenge
 
             services.AddHealthChecks();
 
+            services.AddTransient<ProductImportService>();
             services.AddHostedService<ProductImportService>();
 
             services.AddControllers()

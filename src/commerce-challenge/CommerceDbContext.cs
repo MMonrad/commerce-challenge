@@ -1,5 +1,6 @@
 using System.Reflection;
 using commerce_challenge.Models;
+using commerce_challenge.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace commerce_challenge

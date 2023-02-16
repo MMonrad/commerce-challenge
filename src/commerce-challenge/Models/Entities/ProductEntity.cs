@@ -2,12 +2,12 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace commerce_challenge.Models
+namespace commerce_challenge.Models.Entities
 {
     public class ProductEntity
     {
         public required int ExternalId { get; init; }
-        public Guid Id { get; protected set; } = Guid.NewGuid();
+        public Guid Id { get; set; } = Guid.NewGuid();
         public required string Name { get; set; }
         public required decimal Price { get; set; }
         public required int Size { get; set; }
