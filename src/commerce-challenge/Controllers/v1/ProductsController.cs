@@ -31,7 +31,8 @@ namespace commerce_challenge.Controllers.v1
                 .Take(100)
                 .ToListAsync(token);
 
-            var products = entities.Select(entity => new ProductViewModel())
+            var products = entities.Select(entity => new ProductViewModel
+                    { Id = entity.Id.ToString(), Name = entity.Name, Price = entity.Price, Stars = entity.Stars, Size = entity.Size })
                 .ToList();
 
             return new ProductsViewModel { Products = products };

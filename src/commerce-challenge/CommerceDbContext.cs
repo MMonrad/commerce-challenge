@@ -1,5 +1,4 @@
 using System.Reflection;
-using commerce_challenge.Models;
 using commerce_challenge.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +6,7 @@ namespace commerce_challenge
 {
     public class CommerceDbContext : DbContext
     {
+        public DbSet<CartEntity> Carts { get; init; }
         public DbSet<ProductEntity> Products { get; init; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
